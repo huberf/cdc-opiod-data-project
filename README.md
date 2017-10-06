@@ -1,4 +1,4 @@
-# Opiod Epidemic Relief Project
+# Opioid Epidemic Relief Project
 
 ## Datasets
 * [Underlying Cause of Death, 1999-2015.txt](https://github.com/huberf/cdc-opiod-data-project/blob/master/Underlying%20Cause%20of%20Death%2C%201999-2015.txt) - Contains >4000 entries from 1999 to
