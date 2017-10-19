@@ -1,0 +1,15 @@
+import numpy as np
+import pandas as pd
+import math
+
+countyToData = {}
+for infoList in myData.as_matrix().tolist():
+    key = infoList[0]
+    if not key in countyToData:
+        countyToData[key] = [infoList[1::]]
+    else:
+        countyToData[key] = countyToData[key]+[infoList[1::]]
+
+myData.as_matrix().t0list()
+
+sum(list(filter(lambda x: not math.isnan(int(x)), myData["Deaths"].as_matrix().tolist())))

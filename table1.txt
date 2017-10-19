@@ -1,0 +1,121 @@
+"Notes"	"State"	"State Code"	"Year"	"Year Code"	Deaths	Population	Crude Rate	% of Total Deaths
+	"Alabama"	"01"	"2011"	"2011"	15	4802740	Unreliable	0.9%
+	"Alabama"	"01"	"2012"	"2012"	32	4822023	0.7	2.0%
+	"Alabama"	"01"	"2013"	"2013"	24	4833722	0.5	1.5%
+	"Alabama"	"01"	"2014"	"2014"	25	4849377	0.5	1.6%
+	"Alabama"	"01"	"2015"	"2015"	15	4858979	Unreliable	0.9%
+	"California"	"06"	"2010"	"2010"	21	37253956	0.1	1.3%
+	"California"	"06"	"2011"	"2011"	20	37691912	0.1	1.3%
+	"California"	"06"	"2012"	"2012"	39	38041430	0.1	2.5%
+	"California"	"06"	"2013"	"2013"	32	38332521	0.1	2.0%
+	"California"	"06"	"2014"	"2014"	29	38802500	0.1	1.8%
+	"California"	"06"	"2015"	"2015"	45	39144818	0.1	2.8%
+	"Delaware"	"10"	"2014"	"2014"	12	935614	Unreliable	0.8%
+	"Florida"	"12"	"2011"	"2011"	12	19057542	Unreliable	0.8%
+	"Florida"	"12"	"2013"	"2013"	15	19552860	Unreliable	0.9%
+	"Georgia"	"13"	"2013"	"2013"	10	9992167	Unreliable	0.6%
+	"Georgia"	"13"	"2014"	"2014"	11	10097343	Unreliable	0.7%
+	"Indiana"	"18"	"2015"	"2015"	11	6619680	Unreliable	0.7%
+	"Massachusetts"	"25"	"2010"	"2010"	14	6547629	Unreliable	0.9%
+	"Massachusetts"	"25"	"2011"	"2011"	20	6587536	0.3	1.3%
+	"Massachusetts"	"25"	"2012"	"2012"	25	6646144	0.4	1.6%
+	"Massachusetts"	"25"	"2013"	"2013"	17	6692824	Unreliable	1.1%
+	"Massachusetts"	"25"	"2014"	"2014"	11	6745408	Unreliable	0.7%
+	"Massachusetts"	"25"	"2015"	"2015"	19	6794422	Unreliable	1.2%
+	"Michigan"	"26"	"2010"	"2010"	74	9883640	0.7	4.7%
+	"Michigan"	"26"	"2011"	"2011"	30	9876187	0.3	1.9%
+	"Michigan"	"26"	"2012"	"2012"	40	9883360	0.4	2.5%
+	"Michigan"	"26"	"2013"	"2013"	22	9895622	0.2	1.4%
+	"Michigan"	"26"	"2014"	"2014"	16	9909877	Unreliable	1.0%
+	"Michigan"	"26"	"2015"	"2015"	17	9922576	Unreliable	1.1%
+	"New Jersey"	"34"	"2011"	"2011"	11	8821155	Unreliable	0.7%
+	"New York"	"36"	"2010"	"2010"	17	19378102	Unreliable	1.1%
+	"New York"	"36"	"2011"	"2011"	13	19465197	Unreliable	0.8%
+	"New York"	"36"	"2012"	"2012"	13	19570261	Unreliable	0.8%
+	"New York"	"36"	"2013"	"2013"	21	19651127	0.1	1.3%
+	"New York"	"36"	"2014"	"2014"	29	19746227	0.1	1.8%
+	"New York"	"36"	"2015"	"2015"	34	19795791	0.2	2.1%
+	"Ohio"	"39"	"2010"	"2010"	17	11536504	Unreliable	1.1%
+	"Ohio"	"39"	"2011"	"2011"	16	11544951	Unreliable	1.0%
+	"Ohio"	"39"	"2012"	"2012"	18	11544225	Unreliable	1.1%
+	"Ohio"	"39"	"2013"	"2013"	29	11570808	0.3	1.8%
+	"Ohio"	"39"	"2014"	"2014"	18	11594163	Unreliable	1.1%
+	"Ohio"	"39"	"2015"	"2015"	22	11613423	0.2	1.4%
+	"Oregon"	"41"	"2012"	"2012"	14	3899353	Unreliable	0.9%
+	"Oregon"	"41"	"2014"	"2014"	14	3970239	Unreliable	0.9%
+	"Oregon"	"41"	"2015"	"2015"	14	4028977	Unreliable	0.9%
+	"Pennsylvania"	"42"	"2015"	"2015"	25	12802503	0.2	1.6%
+	"Tennessee"	"47"	"2015"	"2015"	11	6600299	Unreliable	0.7%
+	"Texas"	"48"	"2013"	"2013"	14	26448193	Unreliable	0.9%/Users/Safin/Desktop/OPIOD_DATA/table1.txt
+	"Texas"	"48"	"2015"	"2015"	15	27469114	Unreliable	0.9%
+	"Washington"	"53"	"2013"	"2013"	13	6971406	Unreliable	0.8%
+	"Washington"	"53"	"2014"	"2014"	11	7061530	Unreliable	0.7%
+	"Washington"	"53"	"2015"	"2015"	17	7170351	Unreliable	1.1%
+"---"
+"Dataset: Underlying Cause of Death, 1999-2015"
+"Query Parameters:"
+"Title:"
+"2013 Urbanization: All"
+"Autopsy: All"
+"Gender: All"
+"Hispanic Origin: All"
+"ICD-10 Codes: F11.0 (Mental and behavioural disorders due to use of opioids, acute intoxication), F11.1 (Mental and behavioural"
+"disorders due to use of opioids, harmful use), F11.2 (Mental and behavioural disorders due to use of opioids, dependence"
+"syndrome), F11.3 (Mental and behavioural disorders due to use of opioids, withdrawal state), F11.4 (Mental and behavioural"
+"disorders due to use of opioids, withdrawal state with delirium), F11.5 (Mental and behavioural disorders due to use of opioids,"
+"psychotic disorder), F11.6 (Mental and behavioural disorders due to use of opioids, amnesic syndrome), F11.7 (Mental and"
+"behavioural disorders due to use of opioids, residual and late-onset psychotic disorder), F11.8 (Mental and behavioural"
+"disorders due to use of opioids, other mental and behavioural disorders), F11.9 (Mental and behavioural disorders due to use of"
+"opioids, unspecified mental and behavioural disorder), Y45.0 (Opioids and related analgesics), Y50.1 (Opioid receptor"
+"antagonists)"
+"Place of Death: All"
+"Race: All"
+"States: All"
+"Ten-Year Age Groups: All"
+"Weekday: All"
+"Year/Month: 2010, 2011, 2012, 2013, 2014, 2015"
+"Group By: State, Year"
+"Show Totals: Disabled"
+"Show Zero Values: False"
+"Show Suppressed: False"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/ucd.html for more information."
+"---"
+"Query Date: Oct 5, 2017 5:46:57 PM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. Underlying Cause of Death"
+"1999-2015 on CDC WONDER Online Database, released December, 2016. Data are from the Multiple Cause of Death Files, 1999-2015, as"
+"compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative Program. Accessed"
+"at http://wonder.cdc.gov/ucd-icd10.html on Oct 5, 2017 5:46:57 PM"
+"---"
+Messages:
+"1. Totals are not available for these results due to suppression constraints. More Information:"
+"http://wonder.cdc.gov/wonder/help/faq.html#Privacy."
+"2. Rows with suppressed Deaths are hidden. Use Quick Options above to show suppressed rows."
+"---"
+Caveats:
+"1. As of April 3, 2017, the underlying cause of death has been revised for 125 deaths in 2014. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#2014-Revision."
+"2. Data are Suppressed when the data meet the criteria for confidentiality constraints. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Assurance of Confidentiality."
+"3. Death rates are flagged as Unreliable when the rate is calculated with a numerator of 20 or less. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Unreliable."
+"4. The population figures for year 2015 are bridged-race estimates of the July 1 resident population, from the Vintage 2015"
+"postcensal series released by NCHS on June 28, 2016. The population figures for year 2014 are bridged-race estimates of the July"
+"1 resident population, from the Vintage 2014 postcensal series released by NCHS on June 30, 2015. The population figures for"
+"year 2013 are bridged-race estimates of the July 1 resident population, from the Vintage 2013 postcensal series released by NCHS"
+"on June 26, 2014. The population figures for year 2012 are bridged-race estimates of the July 1 resident population, from the"
+"Vintage 2012 postcensal series released by NCHS on June 13, 2013. The population figures for year 2011 are bridged-race"
+"estimates of the July 1 resident population, from the Vintage 2011 postcensal series released by NCHS on July 18, 2012."
+"Population figures for 2010 are April 1 Census counts. The population figures for years 2001 - 2009 are bridged-race estimates"
+"of the July 1 resident population, from the revised intercensal county-level 2000 - 2009 series released by NCHS on October 26,"
+"2012. Population figures for 2000 are April 1 Census counts. Population figures for 1999 are from the 1990-1999 intercensal"
+"series of July 1 estimates. Population figures for the infant age groups are the number of live births. <br/><b>Note:</b> Rates"
+"and population figures for years 2001 - 2009 differ slightly from previously published reports, due to use of the population"
+"estimates which were available at the time of release."
+"5. The population figures used in the calculation of death rates for the age group 'under 1 year' are the estimates of the"
+"resident population that is under one year of age. More information: http://wonder.cdc.gov/wonder/help/ucd.html#Age Group."
+"6. Changes to cause of death classification affect reporting trends. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#ICD-10 Changes."
