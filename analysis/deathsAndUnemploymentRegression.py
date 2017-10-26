@@ -6,12 +6,23 @@ import json
 unemploymentFileName = '../unemploymentByCounty.json'
 unemploymentFile = json.load(open(unemploymentFileName))
 
-deathFileName = '../DeathsByCountyUnsuppressed2010-2015.json'
-deathFile = json.load(open(deathFileName))
+# deathFileName = '../DeathsByCountyUnsuppressed2010-2015.json'
+# deathFile = json.load(open(deathFileName))
+deathData = {}
+years = ['1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015']
+for i in years:
+    data = json.load(open('../opioid_deaths/' + i + '.json'))
+    deathData.update({i: data})
 
 # TODO: Integrate data source which allows death data selection by year
 def getDeathCountByCounty(countyName, year):
-    return deathFile[countyName]
+    deathFile = deathData[year]
+    deathSpecifics = deathFile[countyName]
+    deathCount = deathSpecifics['Death']
+    population = deathSpecifics['Population']
+    deathPercent = (deathCount * 100000)/population
+    print(deathPercent)
+    return deathPercent
 
 # County data graph stores values for each county over the data lifetime
 countyDataGraph = {}
@@ -39,6 +50,9 @@ print()
 
 average_r_2_value = 0.0
 count = 0.0
+maxRSquared = 0
+r_2_values = {}
+countyNameToCode = json.load(open('../CountyNameToCode.json'))
 # Convert lists to Numpy arrays
 for key, value in countyDataGraph.iteritems():
     x = []
@@ -55,10 +69,17 @@ for key, value in countyDataGraph.iteritems():
 
     slope, intercept, r_value, p_value, std_err = stats.linregress(x_array, y_array)
 
+    if (r_value**2 > maxRSquared):
+        print(key)
+        print(r_value**2)
+        maxRSquared = r_value**2
+
+    r_2_values.update({countyNameToCode[key]: r_value**2})
+
     currentRSum = average_r_2_value * count
     count += 1.0
-    currentRSum += r_value
-    average_r_value = currentRSum/count
+    currentRSum += r_value**2
+    average_r_2_value = currentRSum/count
 
     # Show general stats
     print('Slope: ', slope)
@@ -69,6 +90,9 @@ for key, value in countyDataGraph.iteritems():
 
     # Show how well the model works
     print('r-squared: ', r_value**2)
+
+r2Counties = open('r_2_values.json', 'w')
+r2Counties.write(json.dumps(r_2_values))
 
 print('--------------------------------')
 print('Average r-squared: ', average_r_2_value)

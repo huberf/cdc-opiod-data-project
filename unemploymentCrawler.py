@@ -4,7 +4,9 @@ import re
 import json
 
 states = json.load(file('statesWithCodes.json'))
-years = ['2007']
+countyNameToCode = json.load(file('CountyNameToCode.json'))
+# Includes manually entered years for easy selection and removal
+years = ['1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015']
 
 counties = []
 for state in states:
@@ -27,10 +29,15 @@ for state in states:
         for i in values:
             raw = i['title']
             vals = raw.split(', ')
-            countyName = vals[0][9:]
+            countyName = vals[0][9:] + ", " + state[2]
+            try:
+                countyCode = countyNameToCode[countyName]
+            except:
+                countyCode = 'unavailable'
             unemploymentRate = vals[1][20:]
             cleaned = {
                     'county': countyName,
+                    'countyCode': countyCode,
                     'unemploymentRate': unemploymentRate,
                     'state': state[0],
                     'year': year
