@@ -20,7 +20,7 @@ def getDeathCountByCounty(countyName, year):
     deathSpecifics = deathFile[countyName]
     deathCount = deathSpecifics['Death']
     population = deathSpecifics['Population']
-    deathPercent = (deathCount * 100000)/population
+    deathPercent = (deathCount * 100000.0)/population
     print(deathPercent)
     return deathPercent
 
@@ -52,6 +52,8 @@ average_r_2_value = 0.0
 count = 0.0
 maxRSquared = 0
 r_2_values = {}
+slopeCount = [0, 0]
+slope_values = {}
 countyNameToCode = json.load(open('../CountyNameToCode.json'))
 # Convert lists to Numpy arrays
 for key, value in countyDataGraph.iteritems():
@@ -69,12 +71,20 @@ for key, value in countyDataGraph.iteritems():
 
     slope, intercept, r_value, p_value, std_err = stats.linregress(x_array, y_array)
 
+    if slope > 0:
+        slopeCount[0] += 1
+    else:
+        slopeCount[1] += 1
+
     if (r_value**2 > maxRSquared):
         print(key)
         print(r_value**2)
         maxRSquared = r_value**2
 
-    r_2_values.update({countyNameToCode[key]: r_value**2})
+    # Save useful data
+    countyCode = countyNameToCode[key]
+    r_2_values.update({countyCode: r_value**2})
+    slope_values.update({countyCode: slope})
 
     currentRSum = average_r_2_value * count
     count += 1.0
@@ -91,8 +101,12 @@ for key, value in countyDataGraph.iteritems():
     # Show how well the model works
     print('r-squared: ', r_value**2)
 
+# Write data to files
 r2Counties = open('r_2_values.json', 'w')
 r2Counties.write(json.dumps(r_2_values))
+slopeCounties = open('slope_values.json', 'w')
+slopeCounties.write(json.dumps(slope_values))
 
 print('--------------------------------')
 print('Average r-squared: ', average_r_2_value)
+print(slopeCount)
