@@ -56,7 +56,7 @@ slopeCount = [0, 0]
 slope_values = {}
 countyNameToCode = json.load(open('../CountyNameToCode.json'))
 # Convert lists to Numpy arrays
-for key, value in countyDataGraph.iteritems():
+for key, value in list(countyDataGraph.items()):
     x = []
     y = []
     for i in value:
