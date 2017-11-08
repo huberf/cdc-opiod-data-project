@@ -28,10 +28,16 @@ Want to gain the same insights and follow our process. Do the below.
    dataVisualization.py r_2_values.json > r2byCounty.svg` and load the SVG
    inside a web browser.
 4. Using the above, you can write any data that is mapped to by the county code.
-5. To recreate our analysis or prescription rates, runs `python3
+5. To recreate our analysis of prescription rates, run `python3
    prescriptionAndDeathsRegression.py` and you can analyze the output graphs and
    printed statistics. You can also view the slope and r^2 values in files
    generated in the same directory.
+6. To recreate the analysis of the link between unemployment and prescription,
+   run `python3 unemploymentAndPrescriptionRegression.py` and you can then
+   review the output graphic showing the raw unemployment and prescription
+   data points in a point cloud and also analyze the county by county link via
+   manipulation and viewing of `unemployment_prescription_values.json` (slope) or its
+   companion r^2 file.
 
 ### Replication of Data Retreival
 1. In the main directory simply run `python unemploymentCrawler.py` and wait for

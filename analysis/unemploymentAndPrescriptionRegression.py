@@ -5,6 +5,7 @@ import csv
 import json
 import matplotlib.pyplot as plt
 
+print('Loading data...')
 # Load and format prescription data
 prescriptionDataFile = open('../Part_D_Opioid_Prescribing_Change_Geographic_2013_2014_backup.csv', encoding="ISO-8859-1")
 contents = csv.reader(prescriptionDataFile, dialect='excel')
@@ -24,7 +25,7 @@ for i in prescriptionData[1:]:
         '2014': values2014
     }]
 
-print(prescriptionByCounty)
+#print(prescriptionByCounty)
 
 
 '''
@@ -56,11 +57,11 @@ def getUnemploymentByCounty(countyName, year):
 countyDataGraph = {}
 noMatchCount = 0
 matchCount = 0
-# The death data file has county names mapped to values so we can do the below
 print('Gathering and matching all the data. This may take a while.')
 for i in prescriptionByCounty:
     try:
         countyName = i['county']
+        # Collect unemployment data
         unemployment2013 = getUnemploymentByCounty(countyName, '2013')
         unemployment2014 = getUnemploymentByCounty(countyName, '2014')
         try:
@@ -98,10 +99,13 @@ y_acc = []
 for key, value in list(countyDataGraph.items()):
     x = []
     y = []
+    # Add values and skip entry if either are undefined
     for i in value:
-        if i[1] != 0:
+        if i[0] != '' and i[1] != '':
             x += [i[0]]
             y += [i[1]]
+        else:
+            continue
 
     if (len(x) == 0):
         continue
@@ -175,6 +179,29 @@ print('--------------------------------')
 print('Average r-squared: ', average_r_2_value)
 print(slopeCount)
 
+# Perform linear regression on all accumulated unemployment and prescription data
+# independent of county
+cleaned_x = []
+cleaned_y = []
+for i in range(len(x_acc)):
+    if not np.isnan(x_acc[i]):
+        cleaned_x += [x_acc[i]]
+        cleaned_y += [y_acc[i]]
+    else:
+        print(x_acc[i])
+        print('Not clean')
+x_array = np.array(cleaned_x).astype(np.float)
+y_array = np.array(cleaned_y).astype(np.float)
+print(x_array)
+print('---------------')
+print(y_array)
+slope, intercept, r_value, p_value, std_err = stats.linregress(x_array, y_array)
+print('--------------------------------')
+print('Data set wide slope: ', slope)
+print('Data set wide r^2: ', r_value**2)
+print()
+
+print('Showing plot.')
 plt.plot(x_acc, y_acc, "ro", ms = "0.5")
 plt.xlabel("Unemployment")
 plt.ylabel("Prescription")
