@@ -6,7 +6,8 @@
 * `unemploymentByCounty.json` - Includes unemployment data for every county from
   1999 to 2016
 * `Part_D_Opioid_Prescribing_Change_Geographic_2013_2014_backup.csv` - Includes
-  opioid prescription rates from 2013-2014 by county.
+  opioid prescription rates from 2013-2014 by county. Retreived from
+  [the cms.gov site](https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/OpioidMap.html).
 
 ## Helper Tools
 * boilerplateDataLoad.py - Automatically loads the main data set and can be
